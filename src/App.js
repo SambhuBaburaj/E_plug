@@ -8,6 +8,10 @@ import LoggedOutUser from "./ProtectedRoutes/LoggedOutUser";
 import Register from "./Pages/Register";
 import Home from "./Pages/Admin/Home";
 import Test from "./Pages/Admin/Test";
+import Dashboard from "./Pages/Admin/Dashboard/Dashboard";
+import AddedFood from "./Pages/Admin/Food/AddedFood";
+import AcceptedList from "./Pages/Admin/Accepted-List/AcceptedList";
+import CloseTime from "./Pages/Admin/CloseTime/CloseTime";
 
 function App() {
   return (
@@ -18,6 +22,15 @@ function App() {
         <Route element={<Home />} path="/" >
 
         <Route element={<Test />} path="/home" />
+        <Route element={<Dashboard />} path="/dashboard" />
+        <Route element={<AddedFood />} path="/added-food" />
+        <Route element={<AcceptedList />} path="/accepted-list" />
+        <Route element={<CloseTime />} path="/close-time"/>
+
+        
+
+
+
 
 
         </Route>
