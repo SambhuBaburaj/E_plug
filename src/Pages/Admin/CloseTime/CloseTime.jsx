@@ -4,7 +4,7 @@ function CloseTime() {
   return (
     <div>
       <h1>
-        close timing
+        Processing list
       </h1>
     </div>
   )

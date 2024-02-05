@@ -25,7 +25,7 @@ function App() {
         <Route element={<Dashboard />} path="/dashboard" />
         <Route element={<AddedFood />} path="/added-food" />
         <Route element={<AcceptedList />} path="/accepted-list" />
-        <Route element={<CloseTime />} path="/close-time"/>
+        <Route element={<CloseTime />} path="/proccessing-list"/>
 
         
 

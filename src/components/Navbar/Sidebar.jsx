@@ -56,6 +56,81 @@ function SideBar() {
           <li>
             <a
               onClick={() => {
+                // dispatch(telemedicine());
+                setCurrentRoute("/accepted-list");
+                navigate("/accepted-list");
+                dispatch(openSidebar());
+              }}
+              href="#"
+              className={`flex items-center p-2 pl-12 rounded-lg group ${
+                window.location.pathname === "/accepted-list"
+                  ? "bg-white text-black "
+                  : "text-white"
+              } `}
+            >
+              {window.location.pathname === "/accepted-list" ? (
+                <svg
+                  width="26px"
+                  height="26px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <path
+                      d="M11 6L21 6.00072M11 12L21 12.0007M11 18L21 18.0007M3 11.9444L4.53846 13.5L8 10M3 5.94444L4.53846 7.5L8 4M4.5 18H4.51M5 18C5 18.2761 4.77614 18.5 4.5 18.5C4.22386 18.5 4 18.2761 4 18C4 17.7239 4.22386 17.5 4.5 17.5C4.77614 17.5 5 17.7239 5 18Z"
+                      stroke="#000000"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />{" "}
+                  </g>
+                </svg>
+              ) : (
+                <svg
+                  width="26px"
+                  height="26px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#f5efef"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <path
+                      d="M11 6L21 6.00072M11 12L21 12.0007M11 18L21 18.0007M3 11.9444L4.53846 13.5L8 10M3 5.94444L4.53846 7.5L8 4M4.5 18H4.51M5 18C5 18.2761 4.77614 18.5 4.5 18.5C4.22386 18.5 4 18.2761 4 18C4 17.7239 4.22386 17.5 4.5 17.5C4.77614 17.5 5 17.7239 5 18Z"
+                      stroke="#ffffff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />{" "}
+                  </g>
+                </svg>
+              )}
+
+              <span className="ms-2">Accepting List</span>
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={() => {
                 setCurrentRoute("/dashboard");
                 navigate("/dashboard");
                 dispatch(openSidebar());
@@ -68,8 +143,8 @@ function SideBar() {
               } `}
             >
               <svg
-                width="24px"
-                height="24px"
+                width="28px"
+                height="28px"
                 viewBox="0 -0.5 25 25"
                 fill="#FFFFFF"
                 className={`svg-icon ${
@@ -145,110 +220,6 @@ function SideBar() {
           <li>
             <a
               onClick={() => {
-                // dispatch(telemedicine());
-                setCurrentRoute("/accepted-list");
-                navigate("/accepted-list");
-                dispatch(openSidebar());
-              }}
-              href="#"
-              className={`flex items-center p-2 pl-12 rounded-lg group ${
-                window.location.pathname === "/accepted-list"
-                  ? "bg-white text-black "
-                  : "text-white"
-              } `}
-            >
-              {window.location.pathname === "/accepted-list" ? (
-                <svg
-                  width="24px"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <path
-                      d="M11 6L21 6.00072M11 12L21 12.0007M11 18L21 18.0007M3 11.9444L4.53846 13.5L8 10M3 5.94444L4.53846 7.5L8 4M4.5 18H4.51M5 18C5 18.2761 4.77614 18.5 4.5 18.5C4.22386 18.5 4 18.2761 4 18C4 17.7239 4.22386 17.5 4.5 17.5C4.77614 17.5 5 17.7239 5 18Z"
-                      stroke="#000000"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />{" "}
-                  </g>
-                </svg>
-              ) : (
-                <svg
-                  width="24px"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#f5efef"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <path
-                      d="M11 6L21 6.00072M11 12L21 12.0007M11 18L21 18.0007M3 11.9444L4.53846 13.5L8 10M3 5.94444L4.53846 7.5L8 4M4.5 18H4.51M5 18C5 18.2761 4.77614 18.5 4.5 18.5C4.22386 18.5 4 18.2761 4 18C4 17.7239 4.22386 17.5 4.5 17.5C4.77614 17.5 5 17.7239 5 18Z"
-                      stroke="#ffffff"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />{" "}
-                  </g>
-                </svg>
-              )}
-
-              {/* <svg
-                fill={
-                  window.location.pathname === "/accepted-list"
-                    ? "#your-active-color"
-                    : "#ede8e8"
-                }
-                width="25"
-                height="30"
-                viewBox="-7.5 0 32 32"
-                xmlns="http://www.w3.org/2000/svg"
-                className={`svg-icon ${
-                  window.location.pathname === "/accepted-list"
-                    ? "svg-icon-active"
-                    : ""
-                }`}
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <title>stethoscope</title>
-                  <path d="M16.56 13c0-1.32-1.080-2.4-2.4-2.4s-2.4 1.080-2.4 2.4c0 1.040 0.64 1.92 1.56 2.24v4.92c0 2.84-2.88 3.040-3.76 3.040s-3.76-0.2-3.76-3.040v-1.88c2.28-0.36 4.16-2.080 4.16-3.92v-4.96c0-0.84-0.48-1.6-1.2-1.96-0.64-0.32-1.24-0.4-1.72-0.2-0.44 0.16-0.64 0.6-0.48 1.040s0.64 0.68 1.040 0.52c0.040 0 0.16 0 0.44 0.12 0.16 0.080 0.28 0.28 0.28 0.48v4.92c0 0.92-1.4 2.32-3.32 2.32s-3.32-1.4-3.32-2.32v-4.92c0-0.2 0.12-0.4 0.28-0.48 0.24-0.12 0.4-0.12 0.44-0.12 0.44 0.16 0.92-0.080 1.080-0.52s-0.080-0.92-0.52-1.080c-0.52-0.2-1.12-0.12-1.72 0.2-0.76 0.36-1.2 1.12-1.2 1.96v4.92c0 1.88 1.88 3.56 4.16 3.92v1.88c0 3.24 2.72 4.72 5.4 4.72s5.4-1.44 5.4-4.72v-4.84c0.88-0.32 1.56-1.2 1.56-2.24zM14.16 12.24c0.4 0 0.76 0.32 0.76 0.76 0 0.4-0.32 0.76-0.76 0.76-0.4 0-0.76-0.32-0.76-0.76 0-0.4 0.32-0.76 0.76-0.76z"></path>
-                </g>
-              </svg> */}
-
-              <span className="ms-2">Accepted List</span>
-            </a>
-          </li>
-
-          <li>
-            <a
-              onClick={() => {
                 setCurrentRoute("/added-food");
                 navigate("/added-food");
                 dispatch(openSidebar());
@@ -266,8 +237,8 @@ function SideBar() {
                     ? "#your-active-color"
                     : "#ede8e8"
                 }
-                height="24px"
-                width="24px"
+                height="26px"
+                width="26px"
                 version="1.1"
                 id="Layer_1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -324,29 +295,29 @@ function SideBar() {
             <a
               onClick={() => {
                 // dispatch(pharmacyNav());
-                setCurrentRoute("/close-time");
-                navigate("/close-time");
+                setCurrentRoute("/proccessing-list");
+                navigate("/proccessing-list");
                 dispatch(openSidebar());
               }}
               href="#"
               class={`flex items-center p-2 pl-12 rounded-lg group ${
-                window.location.pathname === "/close-time"
+                window.location.pathname === "/proccessing-list"
                   ? "bg-white text-black "
                   : "text-white"
               } `}
             >
               <svg
                 fill={
-                  window.location.pathname === "/close-time"
+                  window.location.pathname === "/proccessing-list"
                     ? "#your-active-color"
                     : "#ede8e8"
                 }
-                height="23px"
-                width="23px"
+                height="26px"
+                width="26px"
                 version="1.1"
                 id="Layer_1"
                 className={`svg-icon ${
-                  window.location.pathname === "/close-time"
+                  window.location.pathname === "/proccessing-list"
                     ? "svg-icon-active"
                     : ""
                 }`}
@@ -399,410 +370,15 @@ function SideBar() {
                 </g>
               </svg>
 
-              <span class="ms-3">Close Time</span>
+              <span class="ms-3">Processing list</span>
             </a>
           </li>
-
-          {/* <li>
-            <a
-              onClick={() => {
-                setCurrentRoute("/food/categories");
-                navigate("/food/categories");
-                dispatch(openSidebar());
-              }}
-              href="#"
-              class={`flex items-center p-2 pl-12   rounded-lg       group ${
-                window.location.pathname === "/food/categories" ||
-                window.location.pathname === "/food/product" ||
-                window.location.pathname === "/food/review" ||
-                window.location.pathname === "/food/order"
-                  ? "bg-white text-black "
-                  : "text-white"
-              } `}
-            >
-              <svg
-                className={`svg-icon `}
-                width="20"
-                height="25"
-                viewBox="0 0 24 24"
-                id="Layer_1"
-                data-name="Layer 1"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth={0} />
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <g id="SVGRepo_iconCarrier">
-                  <defs>
-                    <style
-                      dangerouslySetInnerHTML={{
-                        __html: `.cls-1{fill:none;
-            
-              ${
-                window.location.pathname === "/food/categories" ||
-                window.location.pathname === "/food/product" ||
-                window.location.pathname === "/food/review" ||
-                window.location.pathname === "/food/order"
-                  ? "stroke:#202124; "
-                  : "  stroke:#ede8e8;"
-              }
-              
-              stroke-miterlimit:10;stroke-width:1.92px;}`,
-                      }}
-                    />
-                  </defs>
-                  <path
-                    className="cls-1"
-                    d="M3.38,1.46h0A5.75,5.75,0,0,1,9.13,7.21v8.63a0,0,0,0,1,0,0H3.38a0,0,0,0,1,0,0V1.46A0,0,0,0,1,3.38,1.46Z"
-                  />
-                  <polyline
-                    className="cls-1"
-                    points="3.38 23.5 3.38 15.83 7.21 15.83 7.21 23.5"
-                  />
-                  <polyline
-                    className="cls-1"
-                    points="14.88 23.5 14.88 11.04 18.71 11.04 18.71 23.5"
-                  />
-                  <path
-                    className="cls-1"
-                    d="M13,7.21h7.67a0,0,0,0,1,0,0v1A2.87,2.87,0,0,1,17.75,11H15.83A2.88,2.88,0,0,1,13,8.17v-1A0,0,0,0,1,13,7.21Z"
-                  />
-                  <line
-                    className="cls-1"
-                    x1="16.79"
-                    y1="0.5"
-                    x2="16.79"
-                    y2="7.21"
-                  />
-                  <line
-                    className="cls-1"
-                    x1="12.96"
-                    y1="0.5"
-                    x2="12.96"
-                    y2="7.21"
-                  />
-                  <line
-                    className="cls-1"
-                    x1="20.63"
-                    y1="0.5"
-                    x2="20.63"
-                    y2="7.21"
-                  />
-                </g>
-              </svg>
-
-              <span class="ms-3">Food</span>
-            </a>
-          </li>
-
-          <li>
-            <a
-              onClick={() => {
-                setCurrentRoute("/transaction");
-                navigate("/transaction");
-                dispatch(openSidebar());
-              }}
-              href="#"
-              class={`flex items-center p-2 pl-12   rounded-lg       group ${
-                currentRoute === "/transaction"
-                  ? "bg-white text-black "
-                  : "text-white"
-              } `}
-            >
-              {currentRoute === "/transaction" ? (
-                <svg
-                  fill="#"
-                  width="30"
-                  height="25"
-                  viewBox="0 0 24 24"
-                  id="exchange-dollar"
-                  data-name="Flat Line"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="icon flat-line"
-                >
-                  <g id="SVGRepo_bgCarrier" strokeWidth={0} />
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      id="primary"
-                      d="M20,12a7.91,7.91,0,0,0-.35-2.35,8,8,0,0,0-14.35-2"
-                      style={{
-                        fill: "none",
-                        stroke: "black", // Changed to black
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                    <path
-                      id="primary-2"
-                      data-name="primary"
-                      d="M4,12a7.91,7.91,0,0,0,.35,2.35,8,8,0,0,0,14.35,2"
-                      style={{
-                        fill: "none",
-                        stroke: "black", // Changed to black
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                    <polyline
-                      id="primary-3"
-                      data-name="primary"
-                      points="19 11 20 12 21 11"
-                      style={{
-                        fill: "none",
-                        stroke: "black", // Changed to black
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                    <polyline
-                      id="primary-4"
-                      data-name="primary"
-                      points="5 13 4 12 3 13"
-                      style={{
-                        fill: "none",
-                        stroke: "black", // Changed to black
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                    <path
-                      id="primary-5"
-                      data-name="primary"
-                      d="M10,15h2.5A1.5,1.5,0,0,0,14,13.5h0A1.5,1.5,0,0,0,12.5,12h-1A1.5,1.5,0,0,1,10,10.5h0A1.5,1.5,0,0,1,11.5,9H14"
-                      style={{
-                        fill: "none",
-                        stroke: "black", // Changed to black
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                    <path
-                      id="primary-6"
-                      data-name="primary"
-                      d="M12,9V8m0,8V15"
-                      style={{
-                        fill: "none",
-                        stroke: "black", // Changed to black
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                  </g>
-                </svg>
-              ) : (
-                <svg
-                  fill="#"
-                  width="30"
-                  height="25"
-                  viewBox="0 0 24 24"
-                  id="exchange-dollar"
-                  data-name="Flat Line"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="icon flat-line"
-                >
-                  <g id="SVGRepo_bgCarrier" strokeWidth={0} />
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      id="primary"
-                      d="M20,12a7.91,7.91,0,0,0-.35-2.35,8,8,0,0,0-14.35-2"
-                      style={{
-                        fill: "none",
-                        stroke: "#ede8e8",
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                    <path
-                      id="primary-2"
-                      data-name="primary"
-                      d="M4,12a7.91,7.91,0,0,0,.35,2.35,8,8,0,0,0,14.35,2"
-                      style={{
-                        fill: "none",
-                        stroke: "#ede8e8",
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                    <polyline
-                      id="primary-3"
-                      data-name="primary"
-                      points="19 11 20 12 21 11"
-                      style={{
-                        fill: "none",
-                        stroke: "#ede8e8",
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                    <polyline
-                      id="primary-4"
-                      data-name="primary"
-                      points="5 13 4 12 3 13"
-                      style={{
-                        fill: "none",
-                        stroke: "#ede8e8",
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                    <path
-                      id="primary-5"
-                      data-name="primary"
-                      d="M10,15h2.5A1.5,1.5,0,0,0,14,13.5h0A1.5,1.5,0,0,0,12.5,12h-1A1.5,1.5,0,0,1,10,10.5h0A1.5,1.5,0,0,1,11.5,9H14"
-                      style={{
-                        fill: "none",
-                        stroke: "#ede8e8",
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                    <path
-                      id="primary-6"
-                      data-name="primary"
-                      d="M12,9V8m0,8V15"
-                      style={{
-                        fill: "none",
-                        stroke: "#ede8e8",
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                      }}
-                    />
-                  </g>
-                </svg>
-              )}
-
-              <span class="ms-1">Transaction</span>
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => {
-                dispatch(cleartopNav());
-                setCurrentRoute("/coupons");
-                navigate("/coupons");
-                dispatch(openSidebar());
-              }}
-              href="#"
-              class={`flex items-center p-2 pl-12 rounded-lg group ${
-                window.location.pathname === "/coupons"
-                  ? "bg-white text-black "
-                  : "text-white"
-              } `}
-            >
-              <svg
-                fill={
-                  window.location.pathname === "/coupons"
-                    ? "#your-active-color"
-                    : "#ede8e8"
-                }
-                width="20"
-                height="25"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className={`svg-icon ${
-                  window.location.pathname === "/coupons"
-                    ? "svg-icon-active"
-                    : ""
-                }`}
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path d="M9.426,6.3,7.57,8.156l2.137,2.137a1,1,0,0,1-1.414,1.414L6.156,9.57,4.3,11.425a4.437,4.437,0,0,0,4.413,7.388,1,1,0,0,1,.574,1.916,6.437,6.437,0,0,1-6.4-10.718L8.012,4.885a6.442,6.442,0,0,1,9.8.829,1,1,0,1,1-1.63,1.159A4.44,4.44,0,0,0,9.426,6.3ZM23,15a6,6,0,1,1-6-6A6.008,6.008,0,0,1,23,15Zm-6-4a3.947,3.947,0,0,0-2.019.567l5.452,5.452A3.957,3.957,0,0,0,21,15,4,4,0,0,0,17,11Zm0,8a3.947,3.947,0,0,0,2.019-.567l-5.452-5.452A3.957,3.957,0,0,0,13,15,4,4,0,0,0,17,19Z"></path>
-                </g>
-              </svg>
-
-              <span class="ms-3">coupons</span>
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => {
-                dispatch(cleartopNav());
-                setCurrentRoute("/push-notification");
-                navigate("/push-notification");
-                dispatch(openSidebar());
-              }}
-              href="#"
-              class={`flex items-center p-2 pl-12 rounded-lg group ${
-                window.location.pathname === "/push-notification"
-                  ? "bg-white text-black "
-                  : "text-white"
-              } `}
-            >
-              <svg
-                fill={
-                  window.location.pathname === "/push-notification"
-                    ? "#your-active-color"
-                    : "#ede8e8"
-                }
-                width="23px"
-                height="23px"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className={`svg-icon ${
-                  window.location.pathname === "/push-notification"
-                    ? "svg-icon-active"
-                    : ""
-                }`}
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  {" "}
-                  <path
-                    d="M9 11H15M12 8V14M21 20L17.6757 18.3378C17.4237 18.2118 17.2977 18.1488 17.1656 18.1044C17.0484 18.065 16.9277 18.0365 16.8052 18.0193C16.6672 18 16.5263 18 16.2446 18H6.2C5.07989 18 4.51984 18 4.09202 17.782C3.71569 17.5903 3.40973 17.2843 3.21799 16.908C3 16.4802 3 15.9201 3 14.8V7.2C3 6.07989 3 5.51984 3.21799 5.09202C3.40973 4.71569 3.71569 4.40973 4.09202 4.21799C4.51984 4 5.0799 4 6.2 4H17.8C18.9201 4 19.4802 4 19.908 4.21799C20.2843 4.40973 20.5903 4.71569 20.782 5.09202C21 5.51984 21 6.0799 21 7.2V20Z"
-                    stroke="#000000"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    fill="#FFFFFF"
-                  ></path>{" "}
-                </g>
-              </svg>
-
-              <span class="ms-1">Push Notification</span>
-            </a>
-          </li>
-          <li className="">
+          <li className="pt-36">
             <a
               onClick={() => {
                 localStorage.removeItem("sophwe_token");
                 localStorage.removeItem("sophwe_fcm");
-                dispatch(cleartopNav());
+                // dispatch(cleartopNav());
 
                 navigate("/login");
                 dispatch(openSidebar());
@@ -845,7 +421,7 @@ function SideBar() {
 
               <span class="ms-3 ">logout</span>
             </a>
-          </li> */}
+          </li>
         </ul>
       </div>
     </aside>
