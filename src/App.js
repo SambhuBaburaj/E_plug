@@ -9,13 +9,15 @@ import Register from "./Pages/Register";
 import Home from "./Pages/Admin/Home";
 import Test from "./Pages/Admin/Test";
 
+
 function App() {
   return (
     <Routes>
       <Route element={<LoggedOutUser />}>
 
         
-        <Route element={<Home />} path="/" >
+        <Route element={<Home />} path="" >
+ 
 
         <Route element={<Test />} path="/home" />
 
