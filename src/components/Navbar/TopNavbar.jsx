@@ -4,7 +4,6 @@ import { openSidebar } from "../../Redux/Features/NavbarSlice";
 import { motion, useAnimationControls } from "framer-motion";
 import logo from "../../assets/images/logo.png";
 import { useLocation, useNavigate } from "react-router-dom";
-import { BellIcon } from "@heroicons/react/24/outline";
 
 import "../../assets/style/navbar.css"
 
@@ -165,7 +164,7 @@ function NavBar() {
                       setOpenNotification((e) => !e);
                     }}
                   >
-                    <BellIcon className="h-6 w-6" />
+                   
                   </button>
                   <div
                     className="badge  p-2 absolute  rounded-full flex items-center justify-center right-5 top-4
