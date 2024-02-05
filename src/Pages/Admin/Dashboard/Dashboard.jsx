@@ -109,6 +109,7 @@ const withDrawMoney=()=>
           </div>
         </div>
       </body>
+      
       {OpenModal&&<Withdraw   onClose={setOpenModal}/>}
       {timeModal&&<TimeModal   onClose={setTimeModal}/>}
     </div>

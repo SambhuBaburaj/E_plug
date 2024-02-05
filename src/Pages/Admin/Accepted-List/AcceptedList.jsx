@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import CatInfoModal from '../../../components/Modal/VuewCatInfo'
 
 function AcceptedList() {
+
+const [indoCardModal, setIndoCardModal] = useState(true)
+
   return (
     <div>
    <section class="py-1 bg-blueGray-50">
@@ -82,7 +86,7 @@ function AcceptedList() {
     </div>
   </div>
 </div>
-
+{indoCardModal&&<CatInfoModal/>}
 </section>
     </div>
   )
